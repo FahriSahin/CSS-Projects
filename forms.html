@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieApp Register Page</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .real_footer{
+            width: 100%;
+            height: 80px;
+            background-color: #473038;
+            padding: 3% 12%;
+            word-spacing: 9px;
+            text-align: right;
+            position: absolute;
+            bottom: 0;
+            
+        }
+        .foter_link{
+            text-align: left;
+            text-decoration: none;
+            color: white;
+        }
+        .foter_linkr{
+            text-align: right;
+            text-decoration: none;
+            color: white;
+        }
+        #site_baslik{
+            display: inline-block;
+            color: #f3f3f3;
+            padding-left: 1.3%;
+        }
+        #header_nav{
+            background-color:#473038;
+            position: fixed;
+            top: 0;
+            z-index: 2;
+            width: 98.8%;
+            height: 70px;
+            padding-left: 13%;
+            padding-right: 13%;
+        }
+        .nav_2_link{    
+            display: inline-block;
+            padding: 1.5%;
+        }
+        #linkler_kume{
+
+        display: inline-block;
+        width: calc(100% - 140px);
+        text-align: right;
+        }
+        #login{
+            margin-left: 2%;
+            padding: 1%;
+            border: 2px;
+            border-radius: 4px;
+            border-style: solid;
+        }
+        .nav_2_link:link{
+          text-decoration: none;
+            color: #f3f3f3;
+        }
+        .nav_2_link:visited{
+            text-decoration: none;
+            color: #f3f3f3;
+        }
+        .nav_2_link:hover{
+            background-color: #dbd8ed;
+            color: #36091e;        
+        }
+        .nav_2_link:active{
+            background-color: #b1aec1;
+            color: #220210;  
+        }
+
+
+
+
+
+        #formss{
+            margin-top: 60px;
+            margin-left: calc(50% - 125px);
+            margin-bottom: 20px;
+        }
+        .sign_up_link{
+            color: #473038;
+            background-color: burlywood;
+            padding: 6px;
+            border: 3px;
+            border-style: solid;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            
+            margin-top: 8px;
+        }
+        .sign_up_link:hover{
+            color: burlywood;
+            background-color: #473038;
+            transition-duration: .4s;
+            
+        }
+        #formss label,
+        #formss input :not([type="checkbox"])
+        #form option{
+            display: block;
+            width: 200px; 
+            
+        }
+        
+        #form input:not([type="checkbox"]),
+        select{
+            display: inline-block;
+            height: 30px;
+            width: 250px;
+            
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+            color: #b9936c;
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    
+     <nav id="header_nav">  
+          <h1 id="site_baslik">MovieApp</h1>    
+            <nav id="linkler_kume">
+            <a href="#n" class="nav_2_link">Filmler</a>
+            <a href="#n" class="nav_2_link">Diziler</a>
+            <a href="#forms.html" class="nav_2_link" id="login">Giris Yap</a>
+            </nav>
+        </nav>
+
+        <h2>Crate Your Account</h2>
+        <nav id="formss">      
+        <form action="" id="form">
+            <label for="name">Name    :</label>
+            <input type="text" id="name">
+            
+            <label for="surname">Surname :</label>
+            <input type="text" id="surname">
+            
+            <label for="email">E-mail  :</label>
+            <input type="email" id="email">
+            
+            <label for="gender">Gender:</label>
+            <select value="gender">
+                <option>Erkek</option>
+                <option>Kadın</option>
+            </select>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+            <br>
+           <label for="Confirm" style="display: inline;">Agree to <a href="">Terms & Conditions</a></label>
+           <input type="checkbox" name="c/r" id="Confirm">
+            <br>
+           <label for="Save" style="display: inline;">Save</label>
+           <input type="checkbox"id="Save">
+           
+        </form>
+        <a href="#" class="sign_up_link" >Sign Up</a>
+        </nav>
+       
+
+    <footer class="real_footer"> 
+        <a href="#n" class="foter_link">About</a>
+        <a href="#n" class="foter_link">Blog</a>
+        <a href="#n" class="foter_link">Forum</a>
+        <a href="#n" class="foter_link">Contact</a>
+         <div style="display: inline-block; width: 65%;">
+         <a href="#n" class="foter_linkr">Facebook</a>
+        <a href="#n" class="foter_linkr">Instagram</a>
+         </div>
+     </footer>
+</body>
+</html>
