@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Background</title>
+    <style>
+        
+        body{
+            margin: 0;
+        }
+        
+        .resim{
+            background-size:cover;
+            background-attachment: fixed; 
+            position: relative;
+        }
+        #pixel{
+            width: 100vw;
+            height: 100vh;
+            background-image: url('pixel_manzara.jpeg'); 
+            ;
+        }
+        #manzara{
+            width: 100vw;
+            height: 40vh;
+            background-image: url('manzara.jpeg'); 
+            
+        }
+        .baslik{
+            font-size: larger;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            display: inline-block;
+            width: 250px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            padding-top: 20px;
+            text-align: center;
+            letter-spacing: 3.5px;
+        }
+        .opaklik{
+            height: 100%;
+            width: 100%;
+            background-color: whitesmoke;
+            opacity: 0.3;
+        }
+        .aciklama{
+            display: inline-block;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            width: 90%;
+            height: 20%;
+            text-align: center;
+            margin-left: 4.5%;
+            margin-right: 4.5%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resim" id="pixel">
+        <div class="opaklik"></div>
+        <h1 class="baslik" id="b1">LOREM, İPSUM.</h1>
+    </div>
+    <p class="aciklama"><strong style="text-align: center;">Lorem ipsum, dolor sit.</strong> <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis enim amet minima consequuntur eligendi cupiditate sint itaque doloremque et vitae animi ea natus, unde autem maiores sit nemo quae quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum dolores laudantium perspiciatis! Quod molestias quae, soluta maiores est, temporibus ad quia aliquam, eos facilis in aut. Dolor, doloremque minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis at porro inventore? Fugiat, consequuntur. Cupiditate ex provident ullam doloremque earum repellat, velit numquam, ut perspiciatis est porro deleniti aut fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt esse, sunt ipsam eos, aliquid suscipit tempore beatae dignissimos deleniti molestias iusto ab sit doloremque doloribus quos fugiat quas, ut tempora?
+    </p>
+    <div class="resim" id="manzara">
+        <div class="opaklik"></div>
+        <h1 class="baslik" id="b2">LOREM, İPSUM.</h1>
+    </div>
+    <p class="aciklama"><strong style="text-align: center;">Lorem ipsum, dolor sit.</strong> <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis enim amet minima consequuntur eligendi cupiditate sint itaque doloremque et vitae animi ea natus, unde autem maiores sit nemo quae quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quis quisquam. Exercitationem ex neque odio, eum aliquam quas laudantium. Illo sequi officia reiciendis porro rem nisi non nesciunt consequatur deleniti! 
+    </p>
+
+</body>
+</html>
