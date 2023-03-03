@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            display: flex;
+            width:100%;
+            height: 85px;
+            background-color:#8594e4 ;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 2.5em;
+            color:#430f58 ;
+        }
+        nav{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background-color: #d5def5;
+            align-items: center;
+        }
+        nav a{
+            text-decoration: none;
+            padding-left: 10px;
+            color: #6643b6;
+            font-size: 1.1em;
+        }
+      .conteiner{
+        display: flex;
+      }
+      .main_content{
+        justify-content: flex-start;
+        flex: 74%;
+        margin: 10px;
+      }
+      .posts{
+        width: 90%;
+        height: 26vh;
+        margin: 15px;
+      }
+    .aside{
+        flex: 24%;
+        justify-content: flex-end;
+    }
+    .aside_lastpost{
+        align-self: flex-start;
+        width: 90%;
+        margin: 30px 10px;
+    }
+    .asideOtherPosts{
+        margin: 10px;
+        width: 90%;
+        height: 50px; 
+        background-color: gray;
+        align-self: flex-end;
+    }
+    footer{
+        display: flex;
+        flex: 100%;
+        height: 100px;
+        justify-content: center;
+        background-color:#8594e4;
+        align-items: center;
+    }
+    footer p{
+        font-size: 1.2em;
+        color: #430f58;
+    }
+    @media (max-width: 768px){
+        .conteiner{
+            display: block;
+
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog Name</h1>
+    </header>
+    <nav>
+        <a href="">Post1</a>
+        <a href="">Post2</a>
+        <a href="">Post3</a>
+        <a href="">Post4</a>
+    </nav>
+
+<div class="conteiner">
+    <div class="main_content">
+        <div class="posts">
+            <h2>Lorem, ipsum dolor.</h2>
+            <div style="width: 100%; height: 120px; background-color: gray;"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Tenetur voluptatem incidunt sed ab eum fugiat</p>
+        </div>
+        <div class="posts">
+            <h2>Lorem, ipsum dolor.</h2>
+            <div style="width: 100%; height: 120px; background-color: gray;"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Tenetur voluptatem incidunt sed ab eum fugiat</p>
+        </div>
+        <div class="posts">
+            <h2>Lorem, ipsum dolor.</h2>
+            <div style="width: 100%; height: 120px; background-color: gray;"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Tenetur voluptatem incidunt sed ab eum fugiat</p>
+        </div>
+    </div>
+    <aside>
+        <div class="aside">
+            <div class="aside_lastpost">
+                <h3>Lorem, ipsum dolor.</h3>
+                <div style="width: 100%; height: 200px; background-color: gray;"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, iure!</p>
+            </div>
+            <div class="asideOtherPosts"></div>
+            <div class="asideOtherPosts"></div>
+            <div class="asideOtherPosts"></div>
+            <div class="asideOtherPosts"></div>
+            <div class="asideOtherPosts"></div>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+</footer>
+
+    
+
+</body>
+</html>
