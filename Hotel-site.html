@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&  display=swap" rel="stylesheet">
+    <title>Hotel Site</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-family: 'Raleway', sans-serif;
+        }
+        body{
+            margin-top: 0;
+        }
+        h1,h2{
+            font-weight: 700;
+        }
+        a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .buttons-dark-brown{
+            background-color: #453953;
+            color: #fff;
+            padding: 8px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .buttons-dark-brown:hover{
+            opacity: 0.9;
+            transition-duration:.4s;
+        }
+
+        .buttons-light-brown{
+            background-color: #975a5e;
+            color: #fff;
+            padding: 8px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .buttons-light-brown:hover{
+            opacity: 0.9;
+            transition-duration:.4s;
+        }
+        /* Navbar */
+        .navbar{
+            display: flex;
+            position: fixed;
+            align-items: center;
+            justify-content: space-around;
+            width:calc(100% - 16px);
+            height: 80px;
+            background-color:#83580b;
+            opacity: .8;
+        }
+        .navLink{
+            margin: 10px;
+            color: #fff;
+            padding-bottom: 3px;
+        }
+        .logo{
+            margin-left: 40px;
+            color: #fff;
+        }
+        .navLink:hover{
+            border:0px;
+            border-bottom:2px;
+            border-color: #f3cba5;
+            border-style: solid;
+            opacity: 0.7;
+            transition-property: opacity;
+            transition-duration:.5s;
+        }
+        .fa-hotel{
+            color: #fff;
+        }
+        /* Home Background */
+        .bg_img{
+            display: flex;
+            background-image: url('hotel_pic.jpeg');
+            background-attachment: fixed;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: bottom;
+            justify-content: center;
+            align-items:center;
+            padding-top: 10%;
+            margin-bottom: 5%;
+            color: #fff;
+        }
+        .opa{
+            content: '';
+            position: absolute;
+            background: rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .welcomeText{
+            text-align: center;
+            z-index: 1;
+        }
+        .welcomeText h1{
+            word-spacing: 7px;
+            font-size: 2.5em;
+        }
+        /* property */
+        .prop_icons{
+            display: flex;
+            flex: 100;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .prop{
+            width: 25%;
+            height: 25%;
+            text-align: center;
+        }
+        .prop i{
+            padding: 10px;
+            border-radius: 50%;
+            background-color:#f3cba5 ;
+        }
+       
+        
+        /* customer service */
+        .custServ{
+            display: flex;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .custImg{
+            flex: 50%;
+            height: 50vh;
+            background-image: url('hotel_room.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .custText_bg{
+            display: flex;
+            background-color: #f3cba5;
+            flex: 50%;
+            vertical-align: middle;
+            justify-content: center;
+            align-items: center;
+        }
+        .custText{
+            padding-left: 20px;
+            color: gray;
+        }
+ 
+        .custText_bg{
+            display: flex;
+            background-color: #f3cba5;
+            flex: 50%;
+            vertical-align: middle;
+            justify-content: center;
+            align-items: center;
+        }
+        /* customer service 2 */
+        .custServ2{
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .bg2{
+            background-image: url('hotel_room2.jpeg');
+        }
+        /* rooms gallery */
+        .roomsGallery{
+            display: flex;
+            flex-wrap: wrap;
+            height: 500px;
+            justify-content: space-evenly;
+            margin-bottom: 40px;
+        }
+        .roomsPic{
+            width: 25%;
+            height: 40%;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 5px;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .roomsPic img{
+            width: 100%;
+            height: 100%;
+        }
+        .roomsPic img:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+            transition-duration: .5s;
+        }
+
+        /* rooms type */
+        .flex3column{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 90px;
+        }
+        .flexcol{
+            display: flex;
+            flex-direction: column;
+            width: 28%;
+            height: 250px;
+            cursor: pointer;
+            margin: 0 15px;
+        }
+        .flexcol img{
+            width: 100%;
+            height: 60%;
+            background-position: center;
+            background-size: cover;
+        }
+        .roomExp{
+            color: #fff;
+            text-align: center;
+            margin: 6px 0px;
+            background-color: #83580b;
+        }
+        /* manager */
+        .flexcol img{
+            border-radius:30% 10%;
+        }
+        .managerExp{
+            text-align: center;
+        }
+        /* contact us */
+        .flex2{
+            display: flex;
+            flex: 100;
+            margin-bottom: 30px;
+        }
+        input{
+            display: block;
+            width: 90%;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        .column2{
+            flex: 50;
+            margin-right: 20px;
+        }
+        form{
+            margin-bottom: 20px;
+        }
+        .column2 a{
+            display: block;
+            width: 90%;
+            text-align: center;
+        }
+        /* footer */
+        footer{
+            display: flex;
+            width: 100%;
+            height: 70px;
+            background-color:gray;
+            opacity: 0.7;
+            color: #fff;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        footer div{
+            text-align: center;
+        }
+        footer i{
+            margin: 0px 5px;
+            cursor: pointer;
+        }
+        @media (max-width:768px){
+            .custServ{
+                display: block;
+            }
+            .custText_bg{
+                padding-bottom: 20px;
+            }
+            .custServ2{
+                display: block;
+            }
+            
+            .roomsPic{
+             padding: 5px;
+             width: 50%; 
+             height: 50%;
+            }
+            .roomsGallery{
+                height: 150%;
+            }
+            .flex3column{
+                display: block;
+            }
+            .flexcol{
+                width: 70%;
+                margin:35px auto ;
+            }
+            .flex2{
+                display: block;
+            }
+            .column2{
+                width: 100%;
+                margin: 30px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="opa"></div>
+   <!-- navbar -->
+   <nav>
+    <div class="navbar">
+        <div>
+            <i class="fas fa-hotel fa-1.5x"></i>
+            <span style="color: #f3cba5;">Deluxe</span> <span>Hotel</span>
+        </div>
+       
+        <div class="navLinks">
+            <a href="" class="navLink">Home</a>
+            <a href="" class="navLink">About</a>
+            <a href="" class="navLink">Contacts</a>
+            <a href="" class="navLink">Rooms</a>
+        </div>
+    </div>
+   </nav>
+    <!-- home screen   -->
+    <div class="bg_img">
+        <div class="welcomeText">
+            <h1>Welcome To Deluxe</h1>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <a href="" class="buttons-light-brown">>Read More</a> 
+        </div>
+          
+    </div>
+    <!-- property -->
+    <div class="prop_icons">
+
+        <div class="prop">
+            <i class="fa-solid fa-handshake fa-2x"></i>
+            <h3>24/7 Front Desk</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, commodi!</p>
+        </div>
+        <div class="prop">
+            <i class="fa-solid fa-utensils fa-2x"></i>
+            <h3>Restaurant Bar</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, repellat!</p>
+        </div>
+
+
+        <div class="prop">
+            <i class="fa-solid fa-bus fa-2x"></i>
+            <h3>Transfer Service</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, culpa!</p>
+        </div>
+        <div class="prop">
+            <i class="fa-solid fa-spa fa-2x"></i>
+            <h3>Spa</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, odit.</p>
+        </div>
+    </div>
+
+    <!-- customer service -->
+    <div class="custServ">
+        <div class="custImg"></div>
+
+        <div class="custText_bg">
+            <div class="custText">
+                <h2>Customer Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, blanditiis.</p>
+                <a href="" class="buttons-dark-brown">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- room gallery -->
+    <section>
+        <h1 style="color: #453953;text-align: center;margin: 40px;">Our Rooms</h1>
+    </section>
+    <div class="roomsGallery">
+        
+        <div class="roomsPic"><img src="hotel_room3.jpeg" alt=""></div>
+        <div class="roomsPic"><img src="hotel_room.jpeg" alt=""></div>
+        <div class="roomsPic"><img src="hotel_room3.jpeg" alt=""></div>
+        <div class="roomsPic"><img src="hotel-room4.jpeg" alt=""></div>
+        <div class="roomsPic"><img src="hotel-room4.jpeg" alt=""></div>
+        <div class="roomsPic"><img src="hotel_room2.jpeg" alt=""></div>
+        <div class="roomsPic"><img src="hotel_room.jpeg" alt=""></div>
+        <div class="roomsPic"><img src="hotel_room2.jpeg" alt=""></div>
+    </div>
+
+    <!-- customer service 2-->
+    <div class="custServ2">
+        <div class="custImg bg2"></div>
+
+        <div class="custText_bg ">
+            <div class="custText">
+                <h2>Customer Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, blanditiis.</p>
+                <a href="" class="buttons-dark-brown">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- rooms type -->
+    <section>
+        <h1 style="color: #453953;text-align: center;margin: 40px;">Room Types</h1>
+    </section>
+    <div class="flex3column">
+        <div class="flexcol">
+            <img src="hotel-room4.jpeg" alt="">
+            <div class="roomExp">
+                <h2>Luxury room</h2>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+        </div>
+
+        <div class="flexcol">
+            <img src="hotel_room.jpeg" alt="">
+            <div class="roomExp">
+                <h2>Deluxe room</h2>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+        </div>
+
+        <div class="flexcol">
+            <img src="hotel_room3.jpeg" alt="">
+            <div class="roomExp">
+                <h2>Standart room</h2>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manager -->
+    <div class="flex3column">
+        <div class="flexcol">
+            <img src="people.jpeg" alt="">
+            <div class="managerExp">
+                <h4>Lorem, ipsum.</h4>
+                <strong>Manager</strong>
+            </div>
+        </div>
+        <div class="flexcol">
+            <img src="people1.jpeg" alt="">
+            <div class="managerExp">
+                <h4>Lorem, ipsum.</h4>
+                <strong>Manager</strong>
+            </div>
+        </div>
+        <div class="flexcol">
+            <img src="people3.jpeg" alt="">
+            <div class="managerExp">
+                <h4>Lorem, ipsum.</h4>
+                <strong>Manager</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="flex2">
+        <img src="contactPic.jpeg" alt="" class="column2">
+        <div class="column2">
+            <form action="">
+                <h3 style="font-weight: 400;font-size: 40px; margin-bottom: 15px;">Contact Us</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <label for="no">Phone:</label>
+                <input type="number">
+            </form>
+            <a href="" class="buttons-light-brown">Send</a>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div>
+            <i class="fa-brands fa-facebook fa-2x"></i>
+            <i class="fa-brands fa-twitter fa-2x"></i>
+            <i class="fa-brands fa-instagram fa-2x"></i>
+            <i class="fa-brands fa-whatsapp fa-2x"></i>
+            <h6 style="margin-top: 5px;">Copyrights 20xx - Hotel Site</h6>
+        </div>
+    </footer>
+</body>
+</html>
